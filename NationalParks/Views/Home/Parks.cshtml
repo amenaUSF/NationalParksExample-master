@@ -1,0 +1,31 @@
+﻿@model NationalParks.Models.Parks
+
+<h1>details</h1>
+<hr />
+
+@foreach (var item in Model.details)
+{
+<div>
+    <h1>new row commenced</h1>
+    <h3>
+        <h2>item objective: </h2>
+        @Html.DisplayFor(modelItem => item.objective)
+    </h3>
+    <div>
+        <h2>item title: </h2>
+        @Html.DisplayFor(modelItem => item.title)
+    </div>
+    <h2>item classification: </h2>
+    @Html.DisplayFor(modelItem => item.classification)
+    <div>
+        <h2>item specification: </h2>
+        @Html.DisplayFor(modelItem => item.specification)
+    </div>
+</div>
+
+    <br />
+}
+
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
